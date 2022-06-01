@@ -30,10 +30,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (username,password,first_name,last_name,email)
-VALUES 
-('john','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K','John','Doe','john@luv2code.com'),
-('mary','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K','Mary','Public','mary@luv2code.com'),
-('susan','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K','Susan','Adams','susan@luv2code.com');
+VALUES
+('john','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K','John','Doe','john@gmail.com'),
+('mary','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K','Mary','Public','mary@gmail.com'),
+('susan','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K','Susan','Adams','susan@gmail.com');
 
 
 --
@@ -53,7 +53,7 @@ CREATE TABLE `role` (
 --
 
 INSERT INTO `role` (name)
-VALUES 
+VALUES
 ('ROLE_EMPLOYEE'),('ROLE_MANAGER'),('ROLE_ADMIN');
 
 --
@@ -65,17 +65,17 @@ DROP TABLE IF EXISTS `users_roles`;
 CREATE TABLE `users_roles` (
   `user_id` int(11) NOT NULL,
   `role_id` int(11) NOT NULL,
-  
+
   PRIMARY KEY (`user_id`,`role_id`),
-  
+
   KEY `FK_ROLE_idx` (`role_id`),
-  
-  CONSTRAINT `FK_USER_05` FOREIGN KEY (`user_id`) 
-  REFERENCES `user` (`id`) 
+
+  CONSTRAINT `FK_USER_05` FOREIGN KEY (`user_id`)
+  REFERENCES `user` (`id`)
   ON DELETE NO ACTION ON UPDATE NO ACTION,
-  
-  CONSTRAINT `FK_ROLE` FOREIGN KEY (`role_id`) 
-  REFERENCES `role` (`id`) 
+
+  CONSTRAINT `FK_ROLE` FOREIGN KEY (`role_id`)
+  REFERENCES `role` (`id`)
   ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -86,7 +86,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 --
 
 INSERT INTO `users_roles` (user_id,role_id)
-VALUES 
+VALUES
 (1, 1),
 (2, 1),
 (2, 2),

@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.luv2code</groupId>
+	<groupId>com.srbhgaur</groupId>
 	<artifactId>spring-security-custom-user-registration-demo</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
@@ -15,7 +15,7 @@
 		<hibernate.version>5.4.14.Final</hibernate.version>
 		<mysql.connector.version>8.0.19</mysql.connector.version>
 		<c3po.version>0.9.5.2</c3po.version>
-		
+
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -31,33 +31,33 @@
 
 		<!-- Spring Security -->
 		<!-- spring-security-web and spring-security-config -->
-		
+
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-web</artifactId>
 		    <version>${springsecurity.version}</version>
 		</dependency>
-		
+
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-config</artifactId>
 		    <version>${springsecurity.version}</version>
-		</dependency>	
-		
+		</dependency>
+
 		<!-- Add Spring Security Taglibs support -->
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
 		    <artifactId>spring-security-taglibs</artifactId>
 		    <version>${springsecurity.version}</version>
-		</dependency>	
-		
+		</dependency>
+
 		  <!-- Spring Transactions -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
             <version>${springframework.version}</version>
         </dependency>
-        
+
         <!-- Spring ORM -->
         <dependency>
             <groupId>org.springframework</groupId>
@@ -71,7 +71,7 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
-		
+
 		<!-- Add MySQL and C3P0 support -->
 
 		<dependency>
@@ -79,14 +79,14 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.connector.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>${c3po.version}</version>
 		</dependency>
-				
-		
+
+
 		<!-- Servlet, JSP and JSTL support -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -125,14 +125,14 @@
 
 	<build>
 		<finalName>spring-security-custom-user-registration-demo</finalName>
-	
+
 		<plugins>
 			<plugin>
 				<!-- Add Maven coordinates (GAV) for: maven-war-plugin -->
 			    <groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-war-plugin</artifactId>
-			    <version>3.2.0</version>					
-			</plugin>						
+			    <version>3.2.0</version>
+			</plugin>
 		</plugins>
 
 	</build>
